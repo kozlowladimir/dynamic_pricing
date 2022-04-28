@@ -1,7 +1,46 @@
 base_experiments
 threshold: 1
-range_N: 1
-revenue_mean: 1544000.0
-revenue_std: 0.0
-hotel_states_mean: 0.1605
-hotel_states_std: 0.0
+range_N: 10
+revenue_mean: 1557460.0
+revenue_std: 22441.0
+hotel_states_mean: 0.1531
+hotel_states_std: 0.0065
+
+base_experiments
+threshold: 1
+iter_counts: 10
+revenue_mean: 1558535.0
+revenue_std: 21954.0
+hotel_states_mean: 0.1531
+hotel_states_std: 0.0042
+
+base_experiments
+pricing_method: default
+threshold: 1
+iter_counts: 10
+revenue_mean: 1548335.0
+revenue_std: 22291.0
+hotel_states_mean: 0.156
+hotel_states_std: 0.0052
+
+
+base_experiments
+pricing_method: constant
+threshold: 1
+iter_counts: 10
+revenue_mean: 1504100.0
+revenue_std: 18124.0
+hotel_states_mean: 0.1623
+hotel_states_std: 0.0067
+
+
+base_experiments
+pricing_method: constant
+threshold: 1
+iter_counts: 11
+revenue_mean: 1491636.0
+revenue_std: 14487.0
+hotel_states_mean: 0.166
+hotel_states_std: 0.007
+
+

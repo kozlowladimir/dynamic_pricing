@@ -1,3 +1,4 @@
+import argparse
 import sys
 sys.path.append('D:/git/dynamic_pricing/')
 
@@ -8,10 +9,10 @@ from tqdm import tqdm
 from app.utils.acceptance_rule import AcceptanceRule
 from app.utils.event_generator import EventGenerator
 from app.utils.hotel import Hotel
-from app.utils.pricing import PricingDefault
+from app.utils.pricing import PricingConstant, PricingDefault, PricingRandom
 
 
-def simulate(verbose=0):
+def simulate(pricing_method='default', verbose=0):
     """
     Симуляция деятельности отеля
     :return: общая выручка
@@ -23,7 +24,12 @@ def simulate(verbose=0):
     event = EventGenerator(mu=mu)
     hotel = Hotel(number_of_days=number_of_days)
     acceptance = AcceptanceRule(nominal_price=nominal_price)
-    pricing = PricingDefault(1000)
+    if pricing_method == 'default':
+        pricing = PricingDefault(1000)
+    if pricing_method == 'random':
+        pricing = PricingRandom(1000)
+    if pricing_method == 'constant':
+        pricing = PricingConstant(1000)
 
     total_revenue = 0
     uid = 1
@@ -69,15 +75,22 @@ print('begin')
 
 if __name__ == '__main__':
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--iter_count', required=True)
+    parser.add_argument('--pricing_method', required=True)
+    args = parser.parse_args()
+
+    range_N = int(args.iter_count)
+    pricing_method = args.pricing_method
     # Симулируем N_sim раз и считаем среднюю выручку и её дисперсию при заданной стратегии
     # 1000
 
     res = []
-    range_N = 1
+    # range_N = 1
     threshold = 1
     hotel_states = []
     for k in tqdm(range(range_N)):
-        total_revenue, pricing, hotel_state = simulate()
+        total_revenue, pricing, hotel_state = simulate(pricing_method)
         res.append(total_revenue)
         hotel_states.append(hotel_state)
 
@@ -89,11 +102,16 @@ if __name__ == '__main__':
             "hotel_states_std": round(np.std(hotel_states), 4),
     })
 
-    with open('./app/logs/file.txt', 'w') as f:
+    with open('./app/logs/file.txt', 'a') as f:
         f.write('base_experiments\n')
+        f.write(f'pricing_method: {pricing_method}\n')
         f.write(f'threshold: {threshold}\n')
-        f.write(f'range_N: {range_N}\n')
+        f.write(f'iter_counts: {range_N}\n')
         f.write(f'revenue_mean: {round(np.mean(res), 0)}\n')
         f.write(f'revenue_std: {round(np.std(res), 0)}\n')
         f.write(f'hotel_states_mean: {round(np.mean(hotel_states), 4)}\n')
         f.write(f'hotel_states_std: {round(np.std(hotel_states), 4)}\n')
+        f.write('\n')
+        f.write('\n')
+
+
