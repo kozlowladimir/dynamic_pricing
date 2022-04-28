@@ -1,4 +1,5 @@
-from scipy.stats import bernoulli, norm
+import numpy as np
+from scipy.stats import norm
 
 
 class AcceptanceRule:
@@ -30,4 +31,4 @@ class AcceptanceRule:
         :return: забронировали или нет
         """
         acceptance_chance = 1 - norm.cdf(self.rho * (price / self.nominal_price - 1))
-        return bernoulli(acceptance_chance).rvs()
+        return np.random.choice([0, 1], p=[1-acceptance_chance, acceptance_chance])

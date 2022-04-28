@@ -1,4 +1,5 @@
 import argparse
+from datetime import datetime
 import sys
 sys.path.append('D:/git/dynamic_pricing/')
 
@@ -85,6 +86,8 @@ if __name__ == '__main__':
     # Симулируем N_sim раз и считаем среднюю выручку и её дисперсию при заданной стратегии
     # 1000
 
+    time_begin = datetime.now()
+
     res = []
     # range_N = 1
     threshold = 1
@@ -94,13 +97,7 @@ if __name__ == '__main__':
         res.append(total_revenue)
         hotel_states.append(hotel_state)
 
-    print({
-            "range": range_N,
-            "revenue_mean": round(np.mean(res), 0),
-            "revenue_std": round(np.std(res), 0),
-            "hotel_states_mean": round(np.mean(hotel_states), 4),
-            "hotel_states_std": round(np.std(hotel_states), 4),
-    })
+    time_diff = (datetime.now() - time_begin).total_seconds()
 
     with open('./app/logs/file.txt', 'a') as f:
         f.write('base_experiments\n')
@@ -111,6 +108,7 @@ if __name__ == '__main__':
         f.write(f'revenue_std: {round(np.std(res), 0)}\n')
         f.write(f'hotel_states_mean: {round(np.mean(hotel_states), 4)}\n')
         f.write(f'hotel_states_std: {round(np.std(hotel_states), 4)}\n')
+        f.write(f'time per loop, s: {round(time_diff/range_N, 2)}\n')
         f.write('\n')
         f.write('\n')
 
