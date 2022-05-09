@@ -8,6 +8,7 @@ authors = ["kozlowladimir <kozlowladimir@gmail.com>"]
 python = ">=3.10,<3.11"
 scipy = "^1.8.0"
 tqdm = "^4.64.0"
+pandas = "1.3.5"
 
 [tool.poetry.dev-dependencies]
 
