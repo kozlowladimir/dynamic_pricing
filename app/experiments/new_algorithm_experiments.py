@@ -12,7 +12,7 @@ from app.utils.hotel import Hotel
 from app.utils.pricing import PricingSomeMethod
 
 
-def simulate(params, verbose=0):
+def simulate(params, pricing_strategy='PricingSomeMethod', verbose=0):
     """
     Симуляция деятельности отеля
     :return: общая выручка
@@ -24,7 +24,8 @@ def simulate(params, verbose=0):
     event = EventGenerator(mu=mu)
     hotel = Hotel(number_of_days=number_of_days)
     acceptance = AcceptanceRule(nominal_price=nominal_price)
-    pricing = PricingSomeMethod(1000, **params)
+    if pricing_strategy == 'PricingSomeMethod':
+        pricing = PricingSomeMethod(1000, **params)
 
     total_revenue = 0
     uid = 1
@@ -79,27 +80,31 @@ if __name__ == '__main__':
     parser.add_argument('--iter_count', required=True)
     parser.add_argument('--threshold', required=True)
     parser.add_argument('--explore_count', required=True)
+    parser.add_argument('--pricing_strategy', required=True)
     args = parser.parse_args()
 
     range_N = int(args.iter_count)
     threshold = float(args.threshold)
     explore_count = int(args.explore_count)
+    pricing_strategy = args.pricing_strategy
     # Симулируем N_sim раз и считаем среднюю выручку и её дисперсию при заданной стратегии
     # 1000
 
-    time_begin = datetime.now()
-
+    params = {'threshold': threshold, 'explore_count': explore_count}
     res = []
     hotel_states = []
+    time_begin = datetime.now()
     for k in tqdm(range(range_N)):
-        total_revenue, pricing, hotel_state = simulate({'threshold': threshold})
+        total_revenue, pricing, hotel_state = simulate(params=params, pricing_strategy=pricing_strategy)
         res.append(total_revenue)
         hotel_states.append(hotel_state)
 
     time_diff = (datetime.now() - time_begin).total_seconds()
 
-    with open('./app/logs/file_new_algorithm.txt', 'a') as f:
-        f.write('new_algorithm_experiments\n')
+    file_path = './app/logs/'
+    file_name = f'{pricing_strategy}_algorithm.txt'
+    with open(file_path+file_name, 'a') as f:
+        f.write(f'{pricing_strategy}\n')
         f.write(f'threshold: {threshold}\n')
         f.write(f'iter_counts: {range_N}\n')
         f.write(f'explore_count: {explore_count}\n')

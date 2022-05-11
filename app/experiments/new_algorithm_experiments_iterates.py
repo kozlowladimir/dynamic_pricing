@@ -12,7 +12,7 @@ from app.utils.hotel import Hotel
 from app.utils.pricing import PricingSomeMethod
 
 
-def simulate(params, verbose=0):
+def simulate(params, pricing_strategy='PricingSomeMethod', verbose=0):
     """
     Симуляция деятельности отеля
     :return: общая выручка
@@ -24,7 +24,8 @@ def simulate(params, verbose=0):
     event = EventGenerator(mu=mu)
     hotel = Hotel(number_of_days=number_of_days)
     acceptance = AcceptanceRule(nominal_price=nominal_price)
-    pricing = PricingSomeMethod(1000, **params)
+    if pricing_strategy == 'PricingSomeMethod':
+        pricing = PricingSomeMethod(1000, **params)
 
     total_revenue = 0
     uid = 1
@@ -75,16 +76,24 @@ def simulate(params, verbose=0):
 
 if __name__ == '__main__':
 
-    range_N = 10
-    explore_count = 500
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--iter_count', required=True)
+    parser.add_argument('--explore_count', required=True)
+    parser.add_argument('--pricing_strategy', required=True)
+    args = parser.parse_args()
+
+    range_N = int(args.iter_count)
+    explore_count = int(args.explore_count)
+    pricing_strategy = args.pricing_strategy
+
     # Симулируем N_sim раз и считаем среднюю выручку и её дисперсию при заданной стратегии
     # 1000
-    thresholds = [1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4]
-    time_begin = datetime.now()
+    thresholds = [1.0, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4]
 
     for threshold in thresholds:
         res = []
         hotel_states = []
+        time_begin = datetime.now()
         for k in tqdm(range(range_N)):
             total_revenue, pricing, hotel_state = simulate({'threshold': threshold})
             res.append(total_revenue)
@@ -92,8 +101,10 @@ if __name__ == '__main__':
 
         time_diff = (datetime.now() - time_begin).total_seconds()
 
-        with open('./app/logs/file_new_algorithm.txt', 'a') as f:
-            f.write('new_algorithm_experiments\n')
+        file_path = './app/logs/'
+        file_name = f'{pricing_strategy}_algorithm.txt'
+        with open(file_path + file_name, 'a') as f:
+            f.write(f'{pricing_strategy}\n')
             f.write(f'threshold: {threshold}\n')
             f.write(f'iter_counts: {range_N}\n')
             f.write(f'explore_count: {explore_count}\n')
@@ -101,8 +112,6 @@ if __name__ == '__main__':
             f.write(f'revenue_std: {round(np.std(res), 0)}\n')
             f.write(f'hotel_states_mean: {round(np.mean(hotel_states), 4)}\n')
             f.write(f'hotel_states_std: {round(np.std(hotel_states), 4)}\n')
-            f.write(f'time per loop, s: {round(time_diff/range_N, 2)}\n')
+            f.write(f'time per loop, s: {round(time_diff / range_N, 2)}\n')
             f.write('\n')
             f.write('\n')
-
-
