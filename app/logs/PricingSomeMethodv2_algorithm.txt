@@ -1,0 +1,856 @@
+PricingSomeMethodv2
+threshold: 1.0
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1452878.0
+revenue_std: 26949.0
+hotel_states_mean: 0.1641
+hotel_states_std: 0.0158
+time per loop, s: 99.86
+
+
+PricingSomeMethodv2
+threshold: 1.2
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1482058.0
+revenue_std: 27530.0
+hotel_states_mean: 0.1456
+hotel_states_std: 0.0061
+time per loop, s: 93.77
+
+
+PricingSomeMethodv2
+threshold: 1.4
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1485880.0
+revenue_std: 22005.0
+hotel_states_mean: 0.144
+hotel_states_std: 0.0063
+time per loop, s: 87.49
+
+
+PricingSomeMethodv2
+threshold: 1.6
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1478972.0
+revenue_std: 21614.0
+hotel_states_mean: 0.1407
+hotel_states_std: 0.0049
+time per loop, s: 85.59
+
+
+PricingSomeMethodv2
+threshold: 1.8
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1471032.0
+revenue_std: 32801.0
+hotel_states_mean: 0.1407
+hotel_states_std: 0.0089
+time per loop, s: 79.99
+
+
+PricingSomeMethodv2
+threshold: 2
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1463065.0
+revenue_std: 30263.0
+hotel_states_mean: 0.1431
+hotel_states_std: 0.0065
+time per loop, s: 72.33
+
+
+PricingSomeMethodv2
+threshold: 2.2
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1473698.0
+revenue_std: 16340.0
+hotel_states_mean: 0.142
+hotel_states_std: 0.0047
+time per loop, s: 70.01
+
+
+PricingSomeMethodv2
+threshold: 2.4
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1468560.0
+revenue_std: 18959.0
+hotel_states_mean: 0.1414
+hotel_states_std: 0.0057
+time per loop, s: 66.35
+
+
+PricingSomeMethodv2
+threshold: 2.6
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1455050.0
+revenue_std: 20664.0
+hotel_states_mean: 0.142
+hotel_states_std: 0.0036
+time per loop, s: 63.66
+
+
+PricingSomeMethodv2
+threshold: 2.8
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1466138.0
+revenue_std: 13005.0
+hotel_states_mean: 0.1438
+hotel_states_std: 0.0042
+time per loop, s: 61.84
+
+
+PricingSomeMethodv2
+threshold: 3
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1451785.0
+revenue_std: 26516.0
+hotel_states_mean: 0.147
+hotel_states_std: 0.0063
+time per loop, s: 59.61
+
+
+PricingSomeMethodv2
+threshold: 3.2
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1449080.0
+revenue_std: 25624.0
+hotel_states_mean: 0.1421
+hotel_states_std: 0.0063
+time per loop, s: 57.98
+
+
+PricingSomeMethodv2
+threshold: 3.4
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1429358.0
+revenue_std: 25471.0
+hotel_states_mean: 0.1471
+hotel_states_std: 0.008
+time per loop, s: 55.84
+
+
+PricingSomeMethodv2
+threshold: 3.6
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1449715.0
+revenue_std: 17105.0
+hotel_states_mean: 0.1452
+hotel_states_std: 0.0063
+time per loop, s: 55.29
+
+
+PricingSomeMethodv2
+threshold: 3.8
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1435750.0
+revenue_std: 34551.0
+hotel_states_mean: 0.1479
+hotel_states_std: 0.0044
+time per loop, s: 54.52
+
+
+PricingSomeMethodv2
+threshold: 4
+iter_counts: 10
+explore_count: 500
+revenue_mean: 1434992.0
+revenue_std: 22800.0
+hotel_states_mean: 0.1464
+hotel_states_std: 0.0042
+time per loop, s: 52.47
+
+
+PricingSomeMethodv2
+threshold: 1.0
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1474248.0
+revenue_std: 21603.0
+hotel_states_mean: 0.1606
+hotel_states_std: 0.0098
+time per loop, s: 185.02
+
+
+PricingSomeMethodv2
+threshold: 1.2
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1486632.0
+revenue_std: 18871.0
+hotel_states_mean: 0.1431
+hotel_states_std: 0.0066
+time per loop, s: 206.92
+
+
+PricingSomeMethodv2
+threshold: 1.4
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1490648.0
+revenue_std: 25951.0
+hotel_states_mean: 0.1398
+hotel_states_std: 0.0066
+time per loop, s: 111.41
+
+
+PricingSomeMethodv2
+threshold: 1.6
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1498330.0
+revenue_std: 18904.0
+hotel_states_mean: 0.1417
+hotel_states_std: 0.0071
+time per loop, s: 71.66
+
+
+PricingSomeMethodv2
+threshold: 1.8
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1497350.0
+revenue_std: 27924.0
+hotel_states_mean: 0.1427
+hotel_states_std: 0.0068
+time per loop, s: 70.7
+
+
+PricingSomeMethodv2
+threshold: 2
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1476230.0
+revenue_std: 23416.0
+hotel_states_mean: 0.1405
+hotel_states_std: 0.0041
+time per loop, s: 66.25
+
+
+PricingSomeMethodv2
+threshold: 2.2
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1478738.0
+revenue_std: 22514.0
+hotel_states_mean: 0.1453
+hotel_states_std: 0.0057
+time per loop, s: 64.46
+
+
+PricingSomeMethodv2
+threshold: 2.4
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1491035.0
+revenue_std: 30233.0
+hotel_states_mean: 0.1434
+hotel_states_std: 0.0062
+time per loop, s: 64.43
+
+
+PricingSomeMethodv2
+threshold: 2.6
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1463685.0
+revenue_std: 33989.0
+hotel_states_mean: 0.1399
+hotel_states_std: 0.0082
+time per loop, s: 73.68
+
+
+PricingSomeMethodv2
+threshold: 2.8
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1477292.0
+revenue_std: 11835.0
+hotel_states_mean: 0.141
+hotel_states_std: 0.0062
+time per loop, s: 69.36
+
+
+PricingSomeMethodv2
+threshold: 3
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1462600.0
+revenue_std: 17404.0
+hotel_states_mean: 0.1418
+hotel_states_std: 0.0018
+time per loop, s: 65.74
+
+
+PricingSomeMethodv2
+threshold: 3.2
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1464830.0
+revenue_std: 27494.0
+hotel_states_mean: 0.1459
+hotel_states_std: 0.0059
+time per loop, s: 62.55
+
+
+PricingSomeMethodv2
+threshold: 3.4
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1460418.0
+revenue_std: 23502.0
+hotel_states_mean: 0.1426
+hotel_states_std: 0.0056
+time per loop, s: 114.55
+
+
+PricingSomeMethodv2
+threshold: 3.6
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1454040.0
+revenue_std: 23618.0
+hotel_states_mean: 0.1437
+hotel_states_std: 0.0062
+time per loop, s: 123.23
+
+
+PricingSomeMethodv2
+threshold: 3.8
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1448050.0
+revenue_std: 22621.0
+hotel_states_mean: 0.1449
+hotel_states_std: 0.0078
+time per loop, s: 59.96
+
+
+PricingSomeMethodv2
+threshold: 4
+iter_counts: 10
+explore_count: 400
+revenue_mean: 1437528.0
+revenue_std: 13947.0
+hotel_states_mean: 0.1428
+hotel_states_std: 0.0068
+time per loop, s: 59.76
+
+
+PricingSomeMethodv2
+threshold: 1.0
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1489582.0
+revenue_std: 15082.0
+hotel_states_mean: 0.1554
+hotel_states_std: 0.008
+time per loop, s: 107.4
+
+
+PricingSomeMethodv2
+threshold: 1.2
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1498998.0
+revenue_std: 32321.0
+hotel_states_mean: 0.1443
+hotel_states_std: 0.0064
+time per loop, s: 101.01
+
+
+PricingSomeMethodv2
+threshold: 1.4
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1521690.0
+revenue_std: 29727.0
+hotel_states_mean: 0.1414
+hotel_states_std: 0.0059
+time per loop, s: 94.79
+
+
+PricingSomeMethodv2
+threshold: 1.6
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1513722.0
+revenue_std: 33452.0
+hotel_states_mean: 0.1408
+hotel_states_std: 0.0076
+time per loop, s: 87.9
+
+
+PricingSomeMethodv2
+threshold: 1.8
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1500388.0
+revenue_std: 26627.0
+hotel_states_mean: 0.1387
+hotel_states_std: 0.0075
+time per loop, s: 86.0
+
+
+PricingSomeMethodv2
+threshold: 2
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1478610.0
+revenue_std: 21400.0
+hotel_states_mean: 0.1407
+hotel_states_std: 0.0055
+time per loop, s: 78.15
+
+
+PricingSomeMethodv2
+threshold: 2.2
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1501112.0
+revenue_std: 31394.0
+hotel_states_mean: 0.1421
+hotel_states_std: 0.0058
+time per loop, s: 76.18
+
+
+PricingSomeMethodv2
+threshold: 2.4
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1493542.0
+revenue_std: 31166.0
+hotel_states_mean: 0.1411
+hotel_states_std: 0.0049
+time per loop, s: 74.82
+
+
+PricingSomeMethodv2
+threshold: 2.6
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1498228.0
+revenue_std: 28856.0
+hotel_states_mean: 0.1431
+hotel_states_std: 0.0069
+time per loop, s: 72.83
+
+
+PricingSomeMethodv2
+threshold: 2.8
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1466945.0
+revenue_std: 15056.0
+hotel_states_mean: 0.1419
+hotel_states_std: 0.0051
+time per loop, s: 70.07
+
+
+PricingSomeMethodv2
+threshold: 3
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1489115.0
+revenue_std: 23329.0
+hotel_states_mean: 0.1426
+hotel_states_std: 0.0059
+time per loop, s: 69.16
+
+
+PricingSomeMethodv2
+threshold: 3.2
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1469155.0
+revenue_std: 23694.0
+hotel_states_mean: 0.1448
+hotel_states_std: 0.0025
+time per loop, s: 68.08
+
+
+PricingSomeMethodv2
+threshold: 3.4
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1478292.0
+revenue_std: 26782.0
+hotel_states_mean: 0.1404
+hotel_states_std: 0.0049
+time per loop, s: 66.05
+
+
+PricingSomeMethodv2
+threshold: 3.6
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1461022.0
+revenue_std: 13933.0
+hotel_states_mean: 0.1457
+hotel_states_std: 0.0066
+time per loop, s: 64.77
+
+
+PricingSomeMethodv2
+threshold: 3.8
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1464702.0
+revenue_std: 25114.0
+hotel_states_mean: 0.1408
+hotel_states_std: 0.0076
+time per loop, s: 61.34
+
+
+PricingSomeMethodv2
+threshold: 4
+iter_counts: 10
+explore_count: 300
+revenue_mean: 1451575.0
+revenue_std: 22003.0
+hotel_states_mean: 0.1406
+hotel_states_std: 0.0034
+time per loop, s: 60.51
+
+
+PricingSomeMethodv2
+threshold: 1.0
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1509215.0
+revenue_std: 24766.0
+hotel_states_mean: 0.1561
+hotel_states_std: 0.0124
+time per loop, s: 110.3
+
+
+PricingSomeMethodv2
+threshold: 1.2
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1529705.0
+revenue_std: 26401.0
+hotel_states_mean: 0.1442
+hotel_states_std: 0.0061
+time per loop, s: 102.53
+
+
+PricingSomeMethodv2
+threshold: 1.4
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1530078.0
+revenue_std: 28295.0
+hotel_states_mean: 0.1414
+hotel_states_std: 0.0052
+time per loop, s: 95.54
+
+
+PricingSomeMethodv2
+threshold: 1.6
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1536262.0
+revenue_std: 23849.0
+hotel_states_mean: 0.1413
+hotel_states_std: 0.0039
+time per loop, s: 85.89
+
+
+PricingSomeMethodv2
+threshold: 1.8
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1531255.0
+revenue_std: 23704.0
+hotel_states_mean: 0.1376
+hotel_states_std: 0.0044
+time per loop, s: 85.34
+
+
+PricingSomeMethodv2
+threshold: 2
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1515592.0
+revenue_std: 34973.0
+hotel_states_mean: 0.1394
+hotel_states_std: 0.0047
+time per loop, s: 79.62
+
+
+PricingSomeMethodv2
+threshold: 2.2
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1505605.0
+revenue_std: 19548.0
+hotel_states_mean: 0.1427
+hotel_states_std: 0.0057
+time per loop, s: 78.05
+
+
+PricingSomeMethodv2
+threshold: 2.4
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1501188.0
+revenue_std: 22573.0
+hotel_states_mean: 0.1405
+hotel_states_std: 0.0056
+time per loop, s: 76.95
+
+
+PricingSomeMethodv2
+threshold: 2.6
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1506222.0
+revenue_std: 25122.0
+hotel_states_mean: 0.142
+hotel_states_std: 0.0076
+time per loop, s: 75.41
+
+
+PricingSomeMethodv2
+threshold: 2.8
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1503050.0
+revenue_std: 31698.0
+hotel_states_mean: 0.1405
+hotel_states_std: 0.0068
+time per loop, s: 72.42
+
+
+PricingSomeMethodv2
+threshold: 3
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1502738.0
+revenue_std: 39056.0
+hotel_states_mean: 0.1454
+hotel_states_std: 0.004
+time per loop, s: 70.32
+
+
+PricingSomeMethodv2
+threshold: 3.2
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1485540.0
+revenue_std: 27263.0
+hotel_states_mean: 0.1426
+hotel_states_std: 0.0081
+time per loop, s: 66.91
+
+
+PricingSomeMethodv2
+threshold: 3.4
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1491255.0
+revenue_std: 22507.0
+hotel_states_mean: 0.1433
+hotel_states_std: 0.0066
+time per loop, s: 68.38
+
+
+PricingSomeMethodv2
+threshold: 3.6
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1476558.0
+revenue_std: 25674.0
+hotel_states_mean: 0.1463
+hotel_states_std: 0.0062
+time per loop, s: 65.31
+
+
+PricingSomeMethodv2
+threshold: 3.8
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1461760.0
+revenue_std: 22721.0
+hotel_states_mean: 0.146
+hotel_states_std: 0.0052
+time per loop, s: 64.67
+
+
+PricingSomeMethodv2
+threshold: 4
+iter_counts: 10
+explore_count: 200
+revenue_mean: 1477115.0
+revenue_std: 22483.0
+hotel_states_mean: 0.1388
+hotel_states_std: 0.0065
+time per loop, s: 62.59
+
+
+PricingSomeMethodv2
+threshold: 1
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1532075.0
+revenue_std: 19300.0
+hotel_states_mean: 0.1498
+hotel_states_std: 0.01
+time per loop, s: 105.78
+
+
+PricingSomeMethodv2
+threshold: 1.2
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1574402.0
+revenue_std: 28751.0
+hotel_states_mean: 0.1425
+hotel_states_std: 0.0033
+time per loop, s: 96.24
+
+
+PricingSomeMethodv2
+threshold: 1.4
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1568040.0
+revenue_std: 27677.0
+hotel_states_mean: 0.1449
+hotel_states_std: 0.0033
+time per loop, s: 90.42
+
+
+PricingSomeMethodv2
+threshold: 1.6
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1550962.0
+revenue_std: 34829.0
+hotel_states_mean: 0.1394
+hotel_states_std: 0.0061
+time per loop, s: 82.89
+
+
+PricingSomeMethodv2
+threshold: 1.8
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1542835.0
+revenue_std: 30522.0
+hotel_states_mean: 0.1403
+hotel_states_std: 0.0048
+time per loop, s: 83.38
+
+
+PricingSomeMethodv2
+threshold: 2
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1538362.0
+revenue_std: 37934.0
+hotel_states_mean: 0.1373
+hotel_states_std: 0.0075
+time per loop, s: 76.69
+
+
+PricingSomeMethodv2
+threshold: 2.2
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1520758.0
+revenue_std: 13609.0
+hotel_states_mean: 0.1438
+hotel_states_std: 0.006
+time per loop, s: 80.82
+
+
+PricingSomeMethodv2
+threshold: 2.4
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1528152.0
+revenue_std: 20113.0
+hotel_states_mean: 0.141
+hotel_states_std: 0.0051
+time per loop, s: 75.38
+
+
+PricingSomeMethodv2
+threshold: 2.6
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1516202.0
+revenue_std: 21790.0
+hotel_states_mean: 0.1447
+hotel_states_std: 0.0065
+time per loop, s: 74.56
+
+
+PricingSomeMethodv2
+threshold: 2.8
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1513805.0
+revenue_std: 23267.0
+hotel_states_mean: 0.142
+hotel_states_std: 0.0066
+time per loop, s: 72.46
+
+
+PricingSomeMethodv2
+threshold: 3
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1493512.0
+revenue_std: 24181.0
+hotel_states_mean: 0.1407
+hotel_states_std: 0.0036
+time per loop, s: 66.73
+
+
+PricingSomeMethodv2
+threshold: 3.2
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1502318.0
+revenue_std: 14478.0
+hotel_states_mean: 0.1423
+hotel_states_std: 0.0051
+time per loop, s: 70.76
+
+
+PricingSomeMethodv2
+threshold: 3.4
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1502512.0
+revenue_std: 24428.0
+hotel_states_mean: 0.144
+hotel_states_std: 0.005
+time per loop, s: 67.64
+
+
+PricingSomeMethodv2
+threshold: 3.6
+iter_counts: 10
+explore_count: 100
+revenue_mean: 1508600.0
+revenue_std: 30983.0
+hotel_states_mean: 0.1419
+hotel_states_std: 0.0073
+time per loop, s: 66.77

@@ -172,5 +172,3 @@ revenue_std: 29921.0
 hotel_states_mean: 0.1499
 hotel_states_std: 0.0054
 time per loop, s: 107.4
-
-
