@@ -126,3 +126,115 @@ class PricingSomeMethod(AbstractPricingSomeMethod):
         else:
             price = self.prices[np.random.randint(len(self.prices))]
         return price
+
+
+class AbstractPricingSomeMethodv2(AbstractPricingSomeMethod):
+    """
+    Класс, описывающий одну из стратегий ценообразования
+    """
+    @abstractmethod
+    def calc_price(self, rs: pd.DataFrame, verbose):
+        pass
+
+    def set_price(self, hotel, request, total_requests_per_day_count, verbose=0):
+
+        if len(self.history) >= self.explore_count + len(self.prices):
+            vacante_room_count = hotel.number_of_rooms - hotel.get_loading(request.start_day)
+            if vacante_room_count == 0:
+                price = self.RackRate
+                if verbose:
+                    print(f'price_up_thr: {price}')
+            else:
+                estimate_requests_count = np.max(
+                    [self.get_average_orders(request.depth) - total_requests_per_day_count, 1])
+                rest = estimate_requests_count / (hotel.number_of_rooms - hotel.get_loading(request.start_day))
+
+                p = self.history.groupby('price')['acceptance'].mean()
+                count = self.history.groupby('price')['acceptance'].count()
+                rs = ((p + (p * (1 - p) / count) ** 0.5) * rest).sort_values()
+                rs = pd.DataFrame(rs).reset_index().sort_values(
+                    ['acceptance'], ascending=[True]
+                ).set_index('price')['acceptance']
+                if verbose:
+                    print(p)
+                    print(f'rest: {rest}')
+                    print(f'explore_count: {self.explore_count}')
+                    print(f'estimate_requests_count: {estimate_requests_count}')
+                    print(rs)
+                    print(f'index: {rs.index[0]}')
+                    print(f'threshold: {self.threshold}')
+                    print(f'threshold cond len: {len(rs[rs > self.threshold])}')
+                price = self.calc_price(rs, verbose)
+
+        else:
+            price = self.prices[np.random.randint(len(self.prices))]
+            if verbose:
+                print(f'price_randomed: {price}')
+            # print('False')
+        return price
+
+
+class PricingSomeMethodv2(AbstractPricingSomeMethodv2):
+    """
+    Класс, описывающий одну из стратегий ценообразования
+    """
+    def calc_price(self, rs: pd.DataFrame, verbose):
+        if len(rs[rs > self.threshold]):
+            price = rs[rs > self.threshold].index.max()
+            if verbose:
+                print(f'price_up_thr: {price}')
+        else:
+            price = np.max(rs[rs == rs.max()].index)
+            if verbose:
+                print(f'price_m_thr: {price}')
+        return price
+
+
+class PricingSomeMethodv3(AbstractPricingSomeMethodv2):
+    """
+    Класс, описывающий одну из стратегий ценообразования
+    """
+
+    def calc_price(self, rs: pd.DataFrame, verbose):
+        if len(rs[rs > self.threshold]):
+            price = rs[rs > self.threshold].index.max()
+            if verbose:
+                print(f'price_up_thr: {price}')
+        else:
+            price = (rs*rs.index).idxmax()
+            if verbose:
+                print(f'price_m_thr: {price}')
+        return price
+
+
+class PricingSomeMethodv4(AbstractPricingSomeMethodv2):
+    """
+    Класс, описывающий одну из стратегий ценообразования
+    """
+
+    def __init__(self, nominal_price, threshold, explore_count=500):
+        self.BAR = nominal_price
+        self.RackRate = 1.5 * nominal_price
+        self.Netto = 0.5 * nominal_price
+        self.history = pd.DataFrame({
+            'price': self.prices,
+            'acceptance': [0] * (self.price_steps_count + 1)
+        })
+        self.price_steps_count = 40
+        self.price_step = (self.RackRate - self.Netto) / self.price_steps_count
+        self.prices = [self.Netto + x * self.price_step for x in range(self.price_steps_count + 1)]
+        self.average_period = 7
+        self.event_queue = {x: [0] for x in range(31)}
+        self.threshold = threshold
+        self.explore_count = explore_count
+
+    def calc_price(self, rs: pd.DataFrame, verbose):
+        if len(rs[rs > self.threshold]):
+            price = rs[rs > self.threshold].index.max()
+            if verbose:
+                print(f'price_up_thr: {price}')
+        else:
+            price = (rs*rs.index).idxmax()
+            if verbose:
+                print(f'price_m_thr: {price}')
+        return price
